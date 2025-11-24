@@ -12,7 +12,7 @@ Java	Core Java concepts and solutions to common competitive programming problems
 
 For C/C++:
 
-Bash
+Bash:
 # Example using g++ for a C++ file
 cd CPP_Solutions
 g++ FileName.cpp -o output
@@ -43,3 +43,4 @@ This project is open-source and available under the MIT License.
 
 #Contact
 For questions or suggestions, please contact the repository owner, Nikhil Suryavanshi.
+Email: nikhilsuryavanshi0005@gmail.com 
