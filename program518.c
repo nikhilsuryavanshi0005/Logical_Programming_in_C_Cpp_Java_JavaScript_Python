@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+
+int main()
+{
+    int fd = 0;
+    int iRet = 0;
+    char Buffer[100] = {'\0'};
+
+    char arr[10] ={'\0'};
+    
+    fd = open("JanuaryX.txt",O_RDONLY);
+
+    printf("File gets Opened Successfully opened with %d\n",fd);
+    iRet = read(fd,Buffer,11);
+
+    printf("Data from file is \n");
+    write(1,Buffer,iRet);
+
+    printf("\nReturn value of read is %d\n",iRet);
+
+    close(fd);
+
+    fd = open("JanuaryX.txt",O_RDONLY);
+
+    iRet = read(fd,arr,10);
+
+    printf("Data from file is \n");
+    write(1,arr,iRet);
+    printf("\nReturn value of read is %d\n",iRet);
+
+    close(fd);
+
+    
+
+    return 0;
+}
