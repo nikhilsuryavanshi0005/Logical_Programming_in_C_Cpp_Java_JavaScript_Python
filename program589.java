@@ -1,0 +1,65 @@
+import java.io.*;
+import java.util.*;
+
+
+class program589
+{
+    public static void main(String A[]) throws Exception
+    {
+        int iRet = 0;
+
+        byte Buffer[] = new byte[1024];
+       
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter the Directory name :");
+        String FolderName = sobj.nextLine();
+        
+        System.out.println("Enter the Directory name :");
+        String PackName = sobj.nextLine();
+
+        File fobj = new File(FolderName);
+
+
+
+
+
+        if((fobj.exists()) && (fobj.isDirectory()))
+        {
+            File Packobj = new File(PackName);
+
+            System.out.println("Directory Already Exists");
+            File fArr[] = fobj.listFiles();
+            System.out.println("Number of File in Folder are :"+fArr.length);
+
+            FileOutputStream foobj = new FileOutputStream(Packobj);
+            FileInputStream fiobj = null;
+
+            
+
+            for(int i =0; i<fArr.length; i++)
+            {
+                fiobj = new FileInputStream(fArr[i]);
+                System.out.println("File Name : "+fArr[i].getName() + " Size :"+fArr[i].length()+" bytes");
+               
+                if(fArr[i].isFile())
+                {
+                     while((iRet = fiobj.read(Buffer)) != -1)
+                    {
+                        foobj.write
+                    }
+                }
+               
+                System.out.println("File Name : "+fArr[i].getName() + " Size :"+fArr[i].length()+" bytes");
+               
+                
+            }
+        }
+        else
+        {
+           
+            System.out.println("There is No Such Directory");
+        }
+        
+    }
+}
